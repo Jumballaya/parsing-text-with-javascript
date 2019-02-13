@@ -14,3 +14,27 @@ export const RPAREN = 'RPAREN';
 export const NUMBER = 'NUMBER';
 export const ILLEGAL = 'ILLEGAL';
 export const EOF = 'EOF';
+
+// Token Types
+const types = {
+  PLUS: '+',
+  MINUS: '-',
+  BANG: '!',
+  ASTERISK: '*',
+  SLASH: '/',
+  MODULO: '%',
+  POWER: '^',
+  LPAREN: '(',
+  RPAREN: ')',
+  NUMBER: '_',
+  ILLEGAL: 'illegal',
+  EOF: '',
+};
+
+/**
+ * Create Token
+ */
+export const newToken = type => ({
+  type,
+  literal: types[type],
+});
