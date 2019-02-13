@@ -17,7 +17,20 @@ export default class Lexer {
 
   nextToken() {}
 
-  skipWhiteSpace() {}
+  skipWhiteSpace() {
+    while (this.ch === ' ') {
+      this.readChar();
+    }
+  }
 
-  readChar() {}
+  readChar() {
+    // End of the input
+    if (this.readPos >= this.input.length) {
+      this.ch = ';';
+    } else {
+      this.ch = this.input[this.readPos];
+    }
+    this.pos = this.readPos;
+    this.readPos += 1;
+  }
 };
