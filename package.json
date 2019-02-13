@@ -1,0 +1,16 @@
+{
+  "name": "parsing-text-with-javascript",
+  "version": "1.0.0",
+  "description":
+    "Text interpreter for simple math calculations. [This is my blog post explaining how to build it.](https://www.pburris.me/blog/parsing-text-with-javascript)",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node --experimental-modules tests/lexer.mjs",
+    "start": "node --experimental-modules repl.mjs"
+  },
+  "author": "",
+  "license": "ISC"
+}
